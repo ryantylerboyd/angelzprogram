@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Gameinstances</h1><%= link_to 'New Gameinstance', new_gameinstance_path %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Sessionid</th>
+      <th>Playername</th>
+      <th>Betamount</th>
+      <th>Gametype</th>
+      <th>Multiplier</th>
+      <th>Commission</th>
+      <th>Paymentname</th>
+      <th>Currentprice</th>
+      <th>Crypto</th>
+      <th>Cryptoprice</th>
+      <th>Outcome</th>
+      <th>Result</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @gameinstances.each do |gameinstance| %>
+      <tr>
+        <td><%= gameinstance.sessionid %></td>
+        <td><%= gameinstance.playername %></td>
+        <td><%= gameinstance.betamount %></td>
+        <td><%= gameinstance.gametype %></td>
+        <td><%= gameinstance.multiplier %></td>
+        <td><%= gameinstance.commission %></td>
+        <td><%= gameinstance.paymentname %></td>
+        <td><%= gameinstance.currentprice %></td>
+        <td><%= gameinstance.crypto %></td>
+        <td><%= gameinstance.cryptoprice %></td>
+        <td><%= gameinstance.outcome %></td>
+        <td><%= gameinstance.result %></td>
+        <td><%= link_to 'Show', gameinstance %></td>
+        <td><%= link_to 'Edit', edit_gameinstance_path(gameinstance) %></td>
+        <td><%= link_to 'Destroy', gameinstance, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+

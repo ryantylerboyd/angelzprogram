@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Gametype:</strong>
+  <%= @gametype.gametype %>
+</p>
+
+<p>
+  <strong>Multiplier:</strong>
+  <%= @gametype.multiplier %>
+</p>
+
+<p>
+  <strong>Commission:</strong>
+  <%= @gametype.commission %>
+</p>
+
+<%= link_to 'Edit', edit_gametype_path(@gametype) %> |
+<%= link_to 'Back', gametypes_path %>

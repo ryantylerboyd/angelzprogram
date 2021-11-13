@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Paymenttypes</h1>
+<%= link_to 'New Paymenttype', new_paymenttype_path %>
+<table>
+  <thead>
+    <tr>
+      <th>Paymentname</th>
+      <th>Currentprice</th>
+      <th>Crypto</th>
+      <th>Cryptourl</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @paymenttypes.each do |paymenttype| %>
+      <tr>
+        <td><%= paymenttype.paymentname %></td>
+        <td><%= paymenttype.currentprice %></td>
+        <td><%= paymenttype.crypto %></td>
+        <td><%= paymenttype.cryptourl %></td>
+        <td><%= link_to 'Show', paymenttype %></td>
+        <td><%= link_to 'Edit', edit_paymenttype_path(paymenttype) %></td>
+        <td><%= link_to 'Destroy', paymenttype, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+

@@ -1,0 +1,29 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sessionid: 1
+  playername: MyString
+  betamount: 1.5
+  gametype: MyString
+  multiplier: 1
+  commission: 1
+  paymentname: MyString
+  currentprice: 1.5
+  crypto: false
+  cryptoprice: 1.5
+  outcome: false
+  result: 1.5
+
+two:
+  sessionid: 1
+  playername: MyString
+  betamount: 1.5
+  gametype: MyString
+  multiplier: 1
+  commission: 1
+  paymentname: MyString
+  currentprice: 1.5
+  crypto: false
+  cryptoprice: 1.5
+  outcome: false
+  result: 1.5

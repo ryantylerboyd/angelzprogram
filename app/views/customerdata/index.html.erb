@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Customerdata</h1>
+
+
+<table>
+  <thead>
+    <tr>
+      <th>Playername</th>
+      <th>Betamount</th>
+      <th>Paymenttype</th>
+      <th>Multiplier</th>
+      <th>Gametype</th>
+      <th>Commission</th>
+      <th>Currencyconvert</th>
+      <th>Outcome</th>
+      <th>Netincome</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @customerdata.each do |customerdatum| %>
+      <tr>
+        <td><%= customerdatum.playername %></td>
+        <td><%= customerdatum.betamount %></td>
+        <td><%= customerdatum.paymenttype %></td>
+        <td><%= customerdatum.multiplier %></td>
+        <td><%= customerdatum.gametype %></td>
+        <td><%= customerdatum.commission %></td>
+        <td><%= customerdatum.currencyconvert %></td>
+        <td><%= customerdatum.outcome %></td>
+        <td><%= customerdatum.netincome %></td>
+        <td><%= link_to 'Show', customerdatum %></td>
+        <td><%= link_to 'Edit', edit_customerdatum_path(customerdatum) %></td>
+        <td><%= link_to 'Destroy', customerdatum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Customerdatum', new_customerdatum_path %>

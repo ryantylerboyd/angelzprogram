@@ -1,0 +1,67 @@
+
+<%= form_with(model: customerdatum) do |form| %>
+  <% if customerdatum.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(customerdatum.errors.count, "error") %> prohibited this customerdatum from being saved:</h2>
+
+      <ul>
+        <% customerdatum.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :playername %>
+    <%= form.text_field :playername %>
+  </div>
+
+  <div class="field">
+    <%= form.label :betamount %>
+    <%= form.text_field :betamount %>
+  </div>
+
+  <div class="field">
+    <%= form.label :paymenttype %>
+    <%= form.select :paymenttype, [['Osrs','Osrs'],'Rs3','BTC','ETH','Tesos','LTC','ZELLE','Apple Pay','Cashapp','BNB','ADA','XRP','USD','Other1']%>
+  
+  </div>
+
+  <div class="field">
+    <%= form.label :multiplier %>
+    <%= form.text_field :multiplier %>
+  </div>
+
+  <div class="field">
+    <%= form.label :gametype %>
+    <%= form.select :gametype, ['Fishing','Trivia','FFA','Raffle','Giveaways','Chests','Specials','JackPot','Perks','Balances',
+    'Stats','Greets','Roulette','Over Under','Hot Cold','Black Jack','Slot Machine','Bomb Defuse','Card Duel','Dice Duel',
+    'Death Match','Keno','Dice Arena','Battle Triangle','Russian Roulette','9x8','12x7','14x6','17x5','22x4',
+    '30x3','46x2','53x2','69x3','77x4','82x5','85x6','87x7','90x8','Commission Staking','Sports Betting','In Game Streamed Flowers','Other2']%>
+  </div>
+
+  <div class="field">
+    <%= form.label :commission %>
+    <%= form.number_field :commission %>
+  </div>
+
+  <div class="field">
+    <%= form.label :currencyconvert %>
+    <%= form.text_field :currencyconvert %>
+  </div>
+
+  <div class="field">
+    <%= form.label :outcome %>
+    <%= form.select :remote, options_for_select([['Win', false], ['Loss', true]]), class: 'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :netincome %>
+    <%= form.text_field :netincome %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

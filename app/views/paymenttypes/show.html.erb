@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Paymentname:</strong>
+  <%= @paymenttype.paymentname %>
+</p>
+
+<p>
+  <strong>Currentprice:</strong>
+  <%= @paymenttype.currentprice %>
+</p>
+
+<p>
+  <strong>Crypto:</strong>
+  <%= @paymenttype.crypto %>
+</p>
+
+<p>
+  <strong>Cryptourl:</strong>
+  <%= @paymenttype.cryptourl %>
+</p>
+
+<%= link_to 'Edit', edit_paymenttype_path(@paymenttype) %> |
+<%= link_to 'Back', paymenttypes_path %>

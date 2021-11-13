@@ -1,0 +1,37 @@
+<%= form_with(model: paymenttype) do |form| %>
+  <% if paymenttype.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(paymenttype.errors.count, "error") %> prohibited this paymenttype from being saved:</h2>
+
+      <ul>
+        <% paymenttype.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :paymentname %>
+    <%= form.text_field :paymentname %>
+  </div>
+
+  <div class="field">
+    <%= form.label :currentprice %>
+    <%= form.text_field :currentprice %>
+  </div>
+
+  <div class="field">
+    <%= form.label :crypto %>
+    <%= form.check_box :crypto %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cryptourl %>
+    <%= form.text_field :cryptourl %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

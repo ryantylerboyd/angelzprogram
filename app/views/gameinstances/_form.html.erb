@@ -1,0 +1,78 @@
+<%= form_with(model: gameinstance) do |form| %>
+  <% if gameinstance.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(gameinstance.errors.count, "error") %> prohibited this gameinstance from being saved:</h2>
+
+      <ul>
+        <% gameinstance.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :sessionid %>
+    <%= form.select :sessionid,@sessions.map{|data| data.sessionid} %>
+  </div>
+
+  <div class="field">
+    <%= form.label :playername %>
+    <%= form.text_field :playername %>
+  </div>
+
+  <div class="field">
+    <%= form.label :betamount %>
+    <%= form.text_field :betamount %>
+  </div>
+
+  <div class="field">
+    <%= form.label :gametype %>
+    <%=form.select :gametype,@gametypes.map {|data| [data.gametype,data.id]}%>
+  </div>
+
+  <div class="field">
+    <%= form.label :multiplier %>
+    <%= form.number_field :multiplier %>
+  </div>
+
+  <div class="field">
+    <%= form.label :commission %>
+    <%= form.number_field :commission %>
+  </div>
+
+  <div class="field">
+    <%= form.label :paymentname %>
+    <%=form.select :paymentname,@paymenttypes.map {|data| [data.paymentname,data.id]}%>
+    
+  </div>
+
+  <div class="field">
+    <%= form.label :currentprice %>
+    <%= form.text_field :currentprice %>
+  </div>
+
+  <div class="field">
+    <%= form.label :crypto %>
+    <%= form.check_box :crypto %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cryptoprice %>
+    <%= form.text_field :cryptoprice %>
+  </div>
+
+  <div class="field">
+    <%= form.label :outcome %>
+    <%=form.select :outcome,['true','false'] %>
+  </div>
+
+  <div class="field">
+    <%= form.label :result %>
+    <%= form.text_field :result %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Angelzprogram</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+    <ul>
+      <li><%= link_to 'Home', homepages_path %></li>
+      <li><%= link_to 'Session', sessions_path %></li>
+      <li><%= link_to 'Gameinstance', gameinstances_path %></li>
+      <li><%= link_to 'Gametypes', gametypes_path %></li>
+      <li><%= link_to 'Paymenttypes', paymenttypes_path %></li>
+    </ul>
+    <%= yield %>
+  </body>
+</html>

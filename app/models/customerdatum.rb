@@ -1,0 +1,2 @@
+class Customerdatum < ApplicationRecord
+end
